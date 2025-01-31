@@ -7,6 +7,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'], // Menambahkan font Poppins
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

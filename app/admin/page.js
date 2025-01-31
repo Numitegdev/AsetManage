@@ -105,9 +105,21 @@ export default function StatistikStatusPT() {
       </div>
     </div>
 
-    <p className="text-gray-600 mb-2">
-      Total Assets: <span className="font-medium text-gray-800">{totalAssets}</span>
-    </p>
+    {/* total aset */}
+    <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center space-x-6">
+      <div className="flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-full">
+        {/* Ikon besar */}
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M16 12H8m8 4H8m4-8H8m6 10a4 4 0 100-8 4 4 0 000 8z" />
+        </svg>
+      </div>
+      <div>
+        <p className="text-sm font-medium text-gray-500">Total Assets</p>
+        <p className="text-3xl font-bold text-gray-800">{totalAssets}</p>
+      </div>
+    </div>
+
+
   </div>
 
   {/* Detail Jenis Barang */}
@@ -185,7 +197,7 @@ export default function StatistikStatusPT() {
 
   return (
     <div className="flex min-h-screen font-sans bg-gray-100">
-      <Sidebar />
+      <Sidebar isAdmin />
       <div className="flex flex-col flex-auto items-center p-6 space-y-6">
             <div className="w-full max-w-full">{renderData()}</div>
       </div>
