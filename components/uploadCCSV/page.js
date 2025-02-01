@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Papa from 'papaparse'; // Install dulu dengan `npm install papaparse`
-import { db, collection, getDocs } from '/lib/firebase'; // Pastikan Firebase sudah diimpor dengan benar
+import { db, collection, getDocs, addDoc } from '/lib/firebase'; // Pastikan Firebase sudah diimpor dengan benar
 import Sidebar from '/components/Sidebar';
 
 const UploadCSVPage = () => {
