@@ -98,6 +98,12 @@ export default function Sidebar({ isAdmin = false }) {
                       {isOpen && <span>Upload / Download</span>}
                   </Link>
                 </li>
+                <li>  
+                  <Link href="/admin/cheklist" className="flex items-center space-x-4 hover:bg-gray-700 p-2 rounded-lg transition-colors">
+                    <DocumentAddIcon  className="h-6 w-6 text-gray-300" />
+                      {isOpen && <span> Cheklist</span>}
+                  </Link>
+                </li>
                
               </>
             )}
