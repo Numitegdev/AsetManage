@@ -64,6 +64,18 @@ export default function Sidebar({ isAdmin = false }) {
 
             </li>
 
+
+            <li>
+            <Link 
+              href={isAdmin ? "/admin/map" : "/viewer/map"} 
+              className="flex items-center space-x-4 hover:bg-gray-700 p-2 rounded-lg transition-colors"
+            >
+              <TableIcon className="h-6 w-6 text-gray-300" />
+              {isOpen && <span>Peta</span>}
+            </Link>
+
+            </li>
+               
             {/* Menu Tabel dengan Link untuk routing */}
             <li>
             <Link 
