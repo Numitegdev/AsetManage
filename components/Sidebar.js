@@ -46,7 +46,7 @@ export default function Sidebar({ isAdmin = false }) {
           <img
             src="/numip.png"
             alt="Logo"
-            className="h-16 w-16 mb-2"
+            className="h-16 w-24 mb-2"
           />
           {isOpen && <span className="text-lg font-semibold">DashBoard Data Aset</span>}
         </div>
