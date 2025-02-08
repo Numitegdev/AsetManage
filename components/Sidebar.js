@@ -44,7 +44,7 @@ export default function Sidebar({ isAdmin = false }) {
       <div className={`bg-gray-800 text-white flex flex-col h-full ${isOpen ? 'w-64' : 'w-16'} transition-all duration-300`}>
         <div className="flex flex-col items-center justify-center p-4 bg-gray-900">
           <img
-            src="/numi.png"
+            src="/numip.png"
             alt="Logo"
             className="h-16 w-16 mb-2"
           />
