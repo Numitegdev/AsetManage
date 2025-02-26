@@ -172,10 +172,10 @@ const toggleFilters = () => {
     // Draw Layout: Barcode (QR Code), Logo, and Kode Barang
     const qrImage = await pdfDoc.embedPng(qrCodeDataUrl);
     page.drawImage(qrImage, {
-      x: 10, // Left margin
-      y: height - 50, // Adjust QR position vertically
-      width: 40,
-      height: 40,
+      x: 5, // Left margin
+      y: height - 60, // Adjust QR position vertically
+      width: 55,
+      height: 55,
     });
   
     // Logo on the top-right
@@ -189,8 +189,8 @@ const toggleFilters = () => {
     // Kode Barang below the logo
     page.drawText(` ${kode_barang}`, {
       x: 60, // Same x as logo
-      y: 10, // Bottom of the page
-      size: 8,
+      y: 15, // Bottom of the page
+      size: 10,
       color: rgb(0, 0, 0),
     });
   

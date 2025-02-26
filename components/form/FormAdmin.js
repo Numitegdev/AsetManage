@@ -6,22 +6,92 @@ import { collection, query, where, getDocs, addDoc } from 'firebase/firestore';
 import Sidebar from '/components/Sidebar';
 
 const jenisBarangOptions = {
-  'Leptop': '97',
-  'Monitor': '05',
-  'Printer': '03',
+  'AP Router': '10A',
+  'CLOUD ROUTER SWITCH': '10B',
+  'CLOUD SMART SWITCH': '10C',
+  'PRINTER SERVER': '10D',
+  'ROUTER - 10 CH': '10E',
+  'ROUTER - 4 CH': '10F',
+  'ROUTER - 5 CH': '10G',
+  'SWITCH HUB - 16 CH': '10H',
+  'SWITCH HUB - 24 CH': '10I',
+  'SWITCH HUB - 8 CH': '10J',
+  'AKI - 100AH': '14A',
+  'HDMI': '14B',
+  'INVERTER 1200VA': '14C',
+  'INVERTER 2400VA': '14D',
+  'INVERTER 5000 WATT': '14E',
+  'IPS LUMINOUS CRUZE': '14F',
+  'PABX': '14G',
+  'USB HUB': '14H',
+  'PROYEKTOR': '14I',
+  'UPS 1000VA': '14J',
+  'UPS 1200VA': '14K',
+  'ID ACCESS CONTROL': '15',
+  'SPEAKER PORTABLE': '17',
+  'RAK SERVER - BESAR': '21A',
+  'DESKTOP PC OFFICE (91)': '91',
+  'DESKTOP PC OFFICE (92)': '92',
+  'LAPTOP – OFFICE (97)': '97',
+  'SERVER - HIGH END (99)': '99',
+  'PRINTER': '03A',
+  'PRINTER MINI THERMAL': '03B',
+  'PRINTER LASER': '03C',
+  'FINGERPRINT': '04',
+  'MONITOR': '05',
+  'TELEPON': '06',
+  'MODEM POOL GSM - 16': '08A',
+  'MODEM POOL GSM - 8': '08B',
+  'MODEM TELEPON': '08C',
+  'MODEM WAVECOM': '08D',
+  'CAMERA ZOOM': '09',
+  'BARCODE SCANNER': '11',
+  'DVR CCTV': '16A',
+  'CAMERA CCTV': '16B',
+  'GENSET 3-9 KVA': '19A',
+  'SEWA GENSET 5 KVA': '19B',
+  'MOTOR': '20A',
+  'MOBIL': '20B',
+  'DESKTOP PC - SPEK MEDIUM (MINI PC)': '93',
+  'DESKTOP PC - SPEK MEDIUM ( ALIENWARE )': '94',
+  'DESKTOP PC - HIGH END (95)': '95A',
+  'SERVER - HIGH END (95)': '95B',
+  'DESKTOP PC - SPEK MEDIUM ( ALL - IN - ONE)': '96',
+  'DESKTOP PC - SPEK MEDIUM ( Accurate )': 'AA',
+  
 };
 
 const lokasiOptions = {
   '02': 'R. Admin',
   '05': 'R. ACT',
   '07': 'R. Server Utama',
+  '11': 'Bekas Pajak',
+  '12': 'Dapur',
+  '13': 'Gudang Bawah',
+  '10': 'HRD',
+  '21': 'Kantor Numiteg',
+  '21B': 'KIOSK ( numiteg )',
+  '18A': 'Konter Melati',
+  '29': 'Lorong Admin & ACT',
+  'KK': 'KIRIM KELUAR',
+  '22': 'POS GA',
+  '03': 'R. Direktur',
+  '20': 'R. Finance',
+  '04': 'R. Gudang Atas',
+  '18': 'R. Marketing',
+  '06': 'R. Operator',
+  'BOSS': 'R. Pak Bos',
+  '33': 'R. Voucher Baru',
+  'BH': 'Resto BH',
+  '01': 'SPV/Manager',
+  '09': 'TeleMarketing',
 };
 
 const statusPTOptions = ['Bekami', 'Aswa', 'Briza', 'Numiteg', 'BlueHeron'];
 
 export default function AssetForm() {
-  const [jenisBarang, setJenisBarang] = useState('Leptop');
-  const [kodeJenisBarang, setKodeJenisBarang] = useState(jenisBarangOptions['Leptop']);
+  const [jenisBarang, setJenisBarang] = useState('LAPTOP – OFFICE (97)');
+  const [kodeJenisBarang, setKodeJenisBarang] = useState(jenisBarangOptions['LAPTOP – OFFICE (97)']);
   const [kodeNomorUrut, setKodeNomorUrut] = useState('001');
   const [lokasi, setLokasi] = useState('02');
   const [statusPT, setStatusPT] = useState('Bekami');

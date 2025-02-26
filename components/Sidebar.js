@@ -44,9 +44,9 @@ export default function Sidebar({ isAdmin = false }) {
       <div className={`bg-gray-800 text-white flex flex-col h-full ${isOpen ? 'w-64' : 'w-16'} transition-all duration-300`}>
         <div className="flex flex-col items-center justify-center p-4 bg-gray-900">
           <img
-            src="/numi.png"
+            src="/numip.png"
             alt="Logo"
-            className="h-16 w-16 mb-2"
+            className="h-12 w-32 mb-2"
           />
           {isOpen && <span className="text-lg font-semibold">DashBoard Data Aset</span>}
         </div>
@@ -63,7 +63,16 @@ export default function Sidebar({ isAdmin = false }) {
             </Link>
 
             </li>
+            <li>
+            <Link 
+              href={isAdmin ? "/admin/map" : "/viewer/map"} 
+              className="flex items-center space-x-4 hover:bg-gray-700 p-2 rounded-lg transition-colors"
+            >
+              <HomeIcon className="h-6 w-6 text-gray-300" />
+              {isOpen && <span>Peta</span>}
+            </Link>
 
+            </li>
             {/* Menu Tabel dengan Link untuk routing */}
             <li>
             <Link 
@@ -104,10 +113,27 @@ export default function Sidebar({ isAdmin = false }) {
                       {isOpen && <span> Cheklist</span>}
                   </Link>
                 </li>
+                <li>  
+                  <Link href="/admin/harga" className="flex items-center space-x-4 hover:bg-gray-700 p-2 rounded-lg transition-colors">
+                    <DocumentAddIcon  className="h-6 w-6 text-gray-300" />
+                      {isOpen && <span> Set Harga</span>}
+                  </Link>
+                </li>
+                {/* <li>  
+                  <Link href="/admin/harga" className="flex items-center space-x-4 hover:bg-gray-700 p-2 rounded-lg transition-colors">
+                    <DocumentAddIcon  className="h-6 w-6 text-gray-300" />
+                      {isOpen && <span> Set Harga</span>}
+                  </Link>
+                </li> */}
+                
                
               </>
             )}
           </ul>
+         
+          <div className="absolute bottom-4 left-0 w-full text-center text-gray-400 text-sm">
+      @ saw_ind 2025
+    </div>
         </div>
       </div>
 

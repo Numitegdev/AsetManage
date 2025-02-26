@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import Sidebar from '/components/Sidebar';
 import { db, collection, getDocs } from '/lib/firebase';
-
+import Link from 'next/link';
 export default function StatistikStatusPT() {
   const [groupedData, setGroupedData] = useState({});
   const [statusKeys, setStatusKeys] = useState([]);
@@ -115,11 +115,17 @@ export default function StatistikStatusPT() {
       </div>
       <div>
         <p className="text-sm font-medium text-gray-500">Total Assets</p>
-        <p className="text-3xl font-bold text-gray-800">{totalAssets}</p>
+        <p className="text-3xl font-bold text-gray-800">{totalAssets}</p>   
+      </div>
+      <div>
+      <Link href="/admin/invo">
+          <button
+          className="flex items-center justify-center bg-blue-500 text-white py-3 px-6 rounded-lg shadow hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed">
+          Invoice
+        </button>
+      </Link>   
       </div>
     </div>
-
-
   </div>
 
   {/* Detail Jenis Barang */}
@@ -136,6 +142,7 @@ export default function StatistikStatusPT() {
         </li>
       ))}
     </ul>
+    
   </div>
 
 

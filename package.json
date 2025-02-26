@@ -13,6 +13,8 @@
     "chart.js": "^4.4.7",
     "date-fns": "^4.1.0",
     "dayjs": "^1.11.13",
+    "docx": "^9.2.0",
+    "file-saver": "^2.0.5",
     "firebase": "^11.2.0",
     "next": "15.1.5",
     "papaparse": "^5.5.1",
