@@ -77,11 +77,15 @@ const InvoicePage = () => {
     switch (selectedPT) {
       case "Bekami":
         return "PT. Berkah Barokah Bersama Ibu";
+         case "Bekami A":
+        return "PT. Berkah Barokah Bersama Ibu";
       case "Aswa":
         return "PT. Aswaja Sari JawaDwipa";
       case "Blueheron":
         return "PT. Berkah Putra Boga";
       case "Briza":
+        return "PT. Berkah Rizki Abdurahman BIN AUF";
+        case "Briza A":
         return "PT. Berkah Rizki Abdurahman BIN AUF";
       default:
         return "PT. Tidak Diketahui"; // Jika tidak cocok dengan opsi yang ada
@@ -91,11 +95,15 @@ const InvoicePage = () => {
     switch (selectedPT) {
       case "Bekami":
         return "Jl. Cantel No. 16 RT 001 RW 001 Mujamuju Umbulharjo, Yogyakarta, 55165";
+         case "Bekami A":
+        return "Jl. Cantel No. 16 RT 001 RW 001 Mujamuju Umbulharjo, Yogyakarta, 55165";
       case "Aswa":
         return "Jl. Tumenggung Jogonegoro Singkir RT 004 RW 012 Kel. Jaraksari Kec. Wonosobo, Wonosobo 56314";
       case "Blueheron":
         return "Jl. Asem Gede No. 23 Sanggrahan, Condongcatur Kec. Depok, Sleman 55281";
       case "Briza":
+        return "Jl. May. Jend. Bambang Sugeng KM 2 Ruko Green Harmoni RT 006 RW 001 Rojoimo, Wonosobo";
+         case "Briza A":
         return "Jl. May. Jend. Bambang Sugeng KM 2 Ruko Green Harmoni RT 006 RW 001 Rojoimo, Wonosobo";
       default:
         return "PT. Tidak Diketahui"; // Jika tidak cocok dengan opsi yang ada
@@ -105,11 +113,15 @@ const InvoicePage = () => {
     switch (selectedPT) {
       case "Bekami":
         return "(0274) 541591";
+        case "Bekami A":
+        return "(0274) 541591";
       case "Aswa":
         return "-";
       case "Blueheron":
         return "-";
       case "Briza":
+        return "-";
+        case "Briza A":
         return "-";
       default:
         return "PT. Tidak Diketahui"; // Jika tidak cocok dengan opsi yang ada
