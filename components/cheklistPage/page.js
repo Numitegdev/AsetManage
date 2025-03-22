@@ -75,7 +75,7 @@ export default function AssetTable() {
               placeholder="Filter by Kondisi"
               className="border border-gray-300 p-2 w-full rounded-lg focus:ring-2 focus:ring-blue-400"
               value={kondisiFilter}
-              onChange={(e) => setkondisiFilter(e.target.value)}
+              onChange={(e) => setKondisiFilter(e.target.value)}
             />
             <input
               type="text"
