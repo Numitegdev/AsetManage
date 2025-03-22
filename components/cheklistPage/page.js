@@ -11,6 +11,8 @@ export default function AssetTable() {
   const [statusFilter, setStatusFilter] = useState('');
   const [locationFilter, setLocationFilter] = useState('');
   const [codeFilter, setCodeFilter] = useState('');
+  const [kondisiFilter, setCodeFilter] = useState('');
+  const [jenisFilter, setCodeFilter] = useState('');
 
   useEffect(() => {
     async function fetchAssets() {
@@ -63,6 +65,20 @@ export default function AssetTable() {
             />
             <input
               type="text"
+              placeholder="Filter by Jenis Barang"
+              className="border border-gray-300 p-2 w-full rounded-lg focus:ring-2 focus:ring-blue-400"
+              value={jenisFilter}
+              onChange={(e) => setJenisFilter(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Filter by Kondisi"
+              className="border border-gray-300 p-2 w-full rounded-lg focus:ring-2 focus:ring-blue-400"
+              value={kondisiFilter}
+              onChange={(e) => setkondisiFilter(e.target.value)}
+            />
+            <input
+              type="text"
               placeholder="Filter by Lokasi"
               className="border border-gray-300 p-2 w-full rounded-lg focus:ring-2 focus:ring-blue-400"
               value={locationFilter}
@@ -102,6 +118,8 @@ export default function AssetTable() {
                     return (
                       (statusFilter ? asset.status_PT.toLowerCase().includes(statusFilter.toLowerCase()) : true) &&
                       (locationFilter ? asset.lokasi.toLowerCase().includes(locationFilter.toLowerCase()) : true) &&
+                      (jenisFilter ? asset.jenis_barang.toLowerCase().includes(jenisFilter.toLowerCase()) : true) &&
+                      (kondisiFilter ? asset.status_kondisi.toLowerCase().includes(kondisiFilter.toLowerCase()) : true) &&
                       (codeFilter ? asset.kode_barang.toLowerCase().includes(codeFilter.toLowerCase()) : true)
                     );
                   })
