@@ -11,8 +11,8 @@ export default function AssetTable() {
   const [statusFilter, setStatusFilter] = useState('');
   const [locationFilter, setLocationFilter] = useState('');
   const [codeFilter, setCodeFilter] = useState('');
-  const [kondisiFilter, setCodeFilter] = useState('');
-  const [jenisFilter, setCodeFilter] = useState('');
+  const [kondisiFilter, setKondisiFilter] = useState('');
+  const [jenisFilter, setJenisFilter] = useState('');
 
   useEffect(() => {
     async function fetchAssets() {
